@@ -1,0 +1,37 @@
+* {
+ padding: 0%;
+ margin: 0%;
+ box-sizing: border-box;
+ font-family: Arial, Helvetica, sans-serif;
+}
+.Profile-parent-container{
+ display: flex;
+ justify-content: center;
+}
+.myprofile{
+width: 50%;
+}
+.myprofile h3{
+ width: 60%;
+ padding: 10px;
+ border-bottom: 1px solid grey;
+}
+#myprofile-pic {
+ height: 120px;
+}
+.myprofile-content p{
+ margin-top: 20px;
+ text-transform: uppercase;
+ text-decoration: underline;
+}
+.myprofile-content h5 {
+ padding-top: 20px;
+}
+.myprofile-btn button{
+  border: 1px solid grey;
+  outline: none;
+  padding:10px 20px;
+  border-radius: 80px;
+  margin-top: 25px;
+  margin-right: 15px;
+}

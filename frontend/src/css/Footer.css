@@ -1,0 +1,178 @@
+*{
+ margin: 0%;
+ padding: 0%;
+ box-sizing: border-box;
+}
+.footer-parent {
+  width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.App-parent-container {
+ width: 80%;
+ display: flex;
+ column-gap: 4.5rem;
+  margin-top: 20px ;
+}
+
+.footer-logo {
+ width: 80%;
+ display: flex;
+ align-items: center;
+ column-gap: 10px;
+ color: #523c5f;
+}
+
+.footer-logo img {
+ width: 26%;
+}
+.content-container {
+ width: 40%;
+ font-size: 1rem;
+}
+.content-container p{
+ margin-top: 15px;
+}
+.container-logo {
+ display: flex;
+ margin-top: 1.5rem;
+ column-gap: 0.5rem;
+
+}
+
+.container-logo img {
+ height: 50px;
+}
+
+.personal-info {
+ width: 50%;
+ display: flex;
+ justify-content: space-between;
+}
+
+.personal-info ul {
+ list-style: none;
+
+}
+
+.personal-info li {
+ padding-top: 1rem;
+}
+
+.personal-info h3 {
+ font-weight: bold;
+ font-size: 1.2rem;
+}
+
+.your-info h4 {
+ font-weight: bold;
+ font-size: 1rem;
+ margin: 1rem 0rem;
+
+}
+
+.footer {
+ width: 100%;
+ margin-top: 2rem ;
+}
+.footer p{
+  margin-left: 6rem;
+  padding-bottom: 10px;
+}
+hr {
+ margin-bottom: 0.6rem;
+}
+
+@media screen and (max-width:991px) {
+
+.App-parent-container {
+  width: 90%;
+  column-gap: 5rem;
+ }
+
+
+ .personal-info {
+  width: 50%;
+ }
+
+ .footer{
+  width: 90%;
+ }
+
+}
+
+@media screen and (max-width:767px) {
+
+ .App-parent-container {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .content-container {
+  width: 100%;
+ }
+
+ .container-logo {
+  margin-top: 1rem;
+  column-gap: 1rem;
+ }
+
+ .container-logo img {
+  height: 45px;
+ }
+
+ .personal-info {
+  width: 80%;
+  margin-top: 1rem;
+ }
+
+ .personal-info li {
+  padding-top: 1.2rem;
+ }
+
+ .your-info h4 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem 0rem;
+ }
+
+ .footer {
+  width: 95%;
+  margin-top: 1rem;
+ }
+}
+
+@media screen and (max-width:576px) {
+ .container-logo img {
+  height: 40px;
+ }
+
+ .personal-info {
+ width:100%
+
+ }
+
+ .personal-info h3 {
+  margin-top: 1rem;
+ }
+
+ .personal-info li {
+  padding-top: 0.8rem;
+ }
+
+ .your-info h4 {
+  margin: 0.8rem 0rem;
+
+ }
+}
+@media screen and (max-width:390px) {
+  .personal-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+}
