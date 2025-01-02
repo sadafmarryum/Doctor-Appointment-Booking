@@ -1,29 +1,46 @@
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
 .infoform{
  width: 100%;
- height: 100vh;
+  height: 100vh;
  display: flex;
  justify-content: center;
  align-items: center;
- 
+
 }
 .personalInfo{
  width: 50%;
  display: flex;
  flex-direction: column;
-  align-items: center;
+ align-items: center;
+ background-image: url("../assets/bg2.jpg");
+ background-position: center;
+  background-size: cover;
  border: 1px solid grey;
  border-radius: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-top: 80px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.PersonalInfoheader{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Personaltext {
+  color: #544598;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.PersonalInfounderline{
+  width: 30%;
+    border-bottom: 5px solid #544598;
+    border-radius: 4px;
 }
 .infoinputs{
  width: 60%;
  margin: 10px 0px;
- /* border: 1px solid grey; */
 }
 .infoinput{
 padding-top: 10px;
@@ -31,4 +48,50 @@ padding-top: 10px;
 .infoinput input{
   width: 100%;
  padding: 10px ;
+}
+.rowinputs{
+  display: flex;
+  justify-content: space-between;
+}
+.infoinput select{
+width: 100%;
+  padding: 10px;
+}
+
+.btn-personalinfo button {
+  padding: 10px 20px;
+  color: #fff;
+  background: #2e504e;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 18px;
+  margin: 10px;
+}
+
+@media screen and (max-width:900px) {
+  .personalInfo {
+      width: 70%;
+    }
+}
+@media screen and (max-width:767px) {
+.rowinputs {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:576px) {
+  .personalInfo {
+    width: 90%;
+  }
+  .Personaltext{
+    font-size: 25px ;
+  }
+    .PersonalInfounderline {
+      width: 60%;
+    }
+    .infoinputs {
+      width: 70%;
+    }
 }

@@ -1,10 +1,9 @@
 const express = require("express");
 const app = express();
-const db = require('./db/connect');
-const router = require("./routes/router");
+const db = require("../config/connect");
+const router = require("../controllers/router");
 const cors = require("cors");
 const port = 8009;
-
 
 app.use(express.json());
 app.use(cors());

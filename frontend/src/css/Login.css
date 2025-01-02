@@ -1,22 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.formparentContainer {
+  width: 97%;
+  height: 82vh;
+  display: flex;
+}
+
+.formImgContainer {
+  width: 50%;
+  background-color: #544598;
+  background-image: url(../assets/form/formbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  margin: auto;
-  background-color: #5b9d9a;
-  margin-top: 10px;
-  margin-bottom: 80px;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header {
@@ -28,78 +29,84 @@
 }
 
 .text {
-  color: #2e504e;
-  font-size: 40px;
+  color: #544598;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 
 .underline {
-  width: 30%;
-  border-bottom: 5px solid #2e504e;
+  width: 25%;
+  border-bottom: 5px solid #544598;
   border-radius: 4px;
   padding: 6px 0px;
-}
-
-.inputs p {
-  color: #2e504e;
-  margin-left: 40px;
 }
 
 .inputs {
   width: 90%;
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
   margin-top: 25px;
 }
 
-.input {
-  width: 80%;
-  height: 50%;
+.inputParent {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.forminput {
+  width: 100%;
   display: flex;
   align-items: center;
   border-radius: 8px;
   background: rgb(235, 234, 235);
-  margin: auto;
-
+  margin-top: 8px;
+  padding: 10px 0px;
 }
 
-.input img {
+.forminput img {
   margin: 0px 20px;
+  height: 18px;
+
 }
 
-.input input {
-  height: 50px;
+#emailImg {
+  height: 15px;
+}
+
+.forminput input {
   width: 70%;
-  background: transparent;
-  border: none;
+  background-color: inherit;
+  border:none;
   outline: none;
   color: #797979;
   font-size: 1rem;
 }
 
-.create-account {
+.next {
   width: 90%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  column-gap: 20px;
-  margin-top: 40px;
+  margin-top: 23px;
 }
 
-.btn-create-account {
-  width: 60%;
-  height: 40px;
+.btn-next {
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #2e504e;
-  border-radius: 18px;
+  margin-bottom: 18px;
 }
 
-.btn-create-account button {
+.btn-next button {
+  width: 100%;
+  height: 40px;
+  border-radius: 18px;
   color: #fff;
-  background: #2e504e;
+  background: #544598;
   border: none;
   outline: none;
   font-size: 1.1rem;
@@ -108,75 +115,96 @@
 }
 
 #alreadyAccount {
+  width: 100%;
+  text-align: center;
   color: #2e504e;
-  padding: 20px 0px;
+  padding: 18px 0px;
+  font-size: 1.1rem;
   cursor: pointer;
 }
+
+#Account {
+  width: 100%;
+  text-align: center;
+  color: #2e504e;
+  padding: 18px 0px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.eye {
+  width: 100%;
+  height: 16px;
+}
+
 .showHide {
-  width: 30%;
+  width: 10%;
   border: none;
   outline: none;
-background: transparent;
+  background: transparent;
 }
-.showHide img{
-  width: 30%;
-}
+
 span {
   color: blue;
 }
-.error{
-  color: #a15f5f !important;
+
+.error {
+  text-align: left;
+  color: rgb(231, 18, 18) !important;
+  padding: 5px 0px;
 }
 
-@media screen and (max-width:767px) {
-  .container {
-    width: 60%;
+@media screen and (max-width:991px) {
+  .formparentContainer {
+    width: 99%;
   }
 
-  .input {
-    width: 90%;
+  .showHide {
+    margin-right: 15px;
+  }
+
+  .underline {
+    width: 35%;
+  }
+
+}
+
+@media screen and (max-width:750px) {
+  .formImgContainer {
+    display: none;
+  }
+
+  .underline {
+    width: 28%;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .formparentContainer {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:567px) {
+  .container {
+    width: 100%;
   }
 
   .text {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
-  .create-account {
-    margin-top: 50px;
+  .underline {
+    width: 25%;
   }
-
-  .btn-create-account {
-    width: 65%;
-  }
+.inputParent {
+  width: 80%;
 }
-
-@media screen and (max-width:576px) {
-  .container {
-    width: 86%;
+  #alreadyAccount,
+  #Account {
+    font-size: 1rem;
   }
 
-  .header {
-    margin-top: 10px;
-  }
-
-  .text {
-    font-size: 35px;
-  }
-
-  .input {
-    width: 90%;
-  }
-
-  .input input {
-    font-size: 13px;
-  }
-
-  .create-account {
-    margin: 20px 0px;
-  }
-
-  .btn-create-account {
-    width: 55%;
-    font-size: 16px;
-  }
 }

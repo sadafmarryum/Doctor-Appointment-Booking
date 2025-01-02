@@ -1,59 +1,59 @@
-* {
- margin: 0%;
- padding: 0%;
- box-sizing: border-box;
+.myappointment-parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.myappointment-parent h2{
+margin-top: 100px;
+padding-bottom: 5px;
+border-bottom: 3px solid black;
+}
+.myappointment {
+  width: 80%;
 }
 
-.appointment-parent-container {
- display: flex;
- flex-direction: column;
- align-items: center;
+.appointment-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 10px;
+  padding: 10px 0px;
+  border-bottom: 1px solid grey;
 }
 
-.Myappointment {
- width: 90%;
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 40px;
- margin-top: 60px;
- border-radius: 20px;
- border: 1px solid grey;
- margin-bottom: 50px;
+.docImg {
+  max-width: 40%;
+  border: 1px solid grey;
+  background-color: #e2e5ff;
+  border-radius: 30px;
 }
 
-.Myappointment-img {
- background-color: #e2e5ff;
- border-radius: 20px;
+.docImg img {
+  height: 150px;
 }
 
-.Myappointment-content {
- width: 60%;
+.docContent button {
+  padding: 10px 20px;
+  border-radius: 200px;
+  background-color: #5b9d9a;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-.Myappointment-content p {
- padding: 20px 0px;
-}
-#experience{
- border: 1px solid grey;
- padding: 8px;
- border-radius: 20px;
-}
-.booking{
- width: 90%;
- border: 1px solid firebrick;
- height: 300px;
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-.booking  button {
-   padding: 10px 20px;
-   border-radius: 200px;
-   background-color: #5b9d9a;
-   border: none;
-   outline: none;
-   color: white;
-   font-weight: 600;
-   margin-top: 15px;
+@media screen and (max-width:600px) {
+  .appointment-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
   }
+
+  .docImg {
+    max-width: 60%;
+  }
+}

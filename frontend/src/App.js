@@ -1,35 +1,35 @@
-import { Route, Routes } from "react-router-dom";
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Doctor from './pages/Doctor'
-import Login from './pages/Login'
-import About from './pages/About'
-import Contact from './pages/ContactUs'
-import Myprofile from './pages/Myprofile'
-import Myappointment from './pages/Myappointment'
-import Userappointment from "./pages/Userappointment";
-import Register from "./pages/Register";
-import Personalinfo from "./pages/Personalinfo";
+import {Route, Routes } from "react-router-dom";
+import Home from "./layout/Home";
+import Doctor from './layout/Doctor'
+import Aboutus from "./layout/Aboutus";
+import Contactus from "./layout/Contactus";
+import BookAppoimtments from "./layout/BookAppoimtments";
+import PersonalInfo from "./layout/PersonalInfo";
+import MyProfile from "./layout/MyProfile";
+import MyAppointments from "./layout/MyAppointments";
+import LogIn from "./layout/LogIn";
+import Registeer from "./layout/Registeer";
+import Errorpg from "./pages/Errorpg";
 
 
 function App() {
 	return (
 		<>
-				<Routes>
-					<Route path="/" element={<><Header /><Home />  <Footer /></>} />
-					<Route path="/doctors" element={<><Header /><Doctor /> <Footer /></>} />
-					{/* <Route path="/doctors/:speciality" element={<Doctor />} /> */}
-					<Route path="/about" element={<><Header /><About /> <Footer /></>} />
-					<Route path="/contact" element={<><Header /><Contact /><Footer /></>} />
-				<Route path="/myProfile" element={<><Header /><Myprofile /></>} />
-				<Route path="/userappointment" element={<><Header /><Userappointment /></>} />
-					<Route path="/myAppointment" element={<><Header /><Doctor /> <Footer /></>} />
-					<Route path="/myAppointment/:docId" element={<><Header /> <Myappointment /> <Footer /></>} />
-					<Route path="/register" element={<Register />} />
-					<Route path="/login" element={<Login />} />
-				<Route path="/personalinfo" element={<Personalinfo />} />
-				</Routes>
+			<Routes>
+				{/* Public Routes */}
+				<Route path="/" element={<Home />} />
+				<Route path="/docAppointment" element={<Doctor/>} />
+				<Route path="/about" element={<Aboutus/>} />
+				<Route path="/contact" element={<Contactus/>} />
+				<Route path="/docAppointment/:docId" element={<BookAppoimtments/>} />
+				{/* Protected Routes */}
+				<Route path="/personalinfo" element={<PersonalInfo/>} />
+				<Route path="/myProfile" element={<MyProfile/>} />
+				<Route path="/myappointment" element={<MyAppointments/>} />
+				<Route path="/register" element={<Registeer/>} />
+				<Route path="/login" element={<LogIn/>} />
+				<Route path="*" element={<Errorpg/>} />
+			</Routes>
 		</>
 	);
 }

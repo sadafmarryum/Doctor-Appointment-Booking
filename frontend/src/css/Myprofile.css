@@ -1,37 +1,105 @@
-* {
- padding: 0%;
- margin: 0%;
- box-sizing: border-box;
- font-family: Arial, Helvetica, sans-serif;
+.Profile-parent-container {
+  display: flex;
+  justify-content: center;
 }
-.Profile-parent-container{
- display: flex;
- justify-content: center;
+
+.myprofile {
+  width: 50%;
+  height: 80vh;
+  margin-top: 85px;
+  padding: 10px 0px 10px 100px;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-.myprofile{
-width: 50%;
-}
-.myprofile h3{
- width: 60%;
- padding: 10px;
- border-bottom: 1px solid grey;
+
+.myprofile h2{
+  color: #523c5f;
 }
 #myprofile-pic {
- height: 120px;
+  height: 65px;
+  border-radius: 50%;
+  border: 3px solid #523c5f;
 }
-.myprofile-content p{
- margin-top: 20px;
- text-transform: uppercase;
- text-decoration: underline;
+.myprofile-pic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.myprofile-content h5 {
- padding-top: 20px;
+.myprofile-content .underlinepra {
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #523c5f;
+  font-size: 1.2rem;
 }
-.myprofile-btn button{
-  border: 1px solid grey;
+
+.myprofile-content h4 {
+  width: 20%;
+  padding-top: 10px;
+  color: #523c5f;
+  text-align: left;
+}
+#editbtn{
+  margin-top: 40px;
+}
+.myprofile-btn button {
+  border: 1px solid #523c5f;
   outline: none;
-  padding:10px 20px;
+  color: #523c5f;
+  font-weight: 550;
+  padding: 10px 20px;
   border-radius: 80px;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-right: 15px;
+}
+.row {
+  display: flex;
+}
+
+.myprofile-content p {
+  padding-top: 10px;
+  color: #523c5f;
+}
+
+.row input {
+  width: 50%;
+  margin-top: 8px;
+  padding: 5px 10px;
+  outline: none;
+  color: #523c5f;
+  border-radius: 5px;
+}
+
+
+
+@media screen and (max-width:991px) {
+  .myprofile {
+      width: 65%;
+        padding: 10px 0px 10px 70px;
+  }
+  .myprofile-content h4 {
+    width: 30%;
+  }
+} 
+
+@media screen and (max-width:600px) {
+  .myprofile {
+      padding: 10px 0px 10px 50px;
+    }
+}
+
+@media screen and (max-width:485px) {
+  .myprofile {
+    width: 80%;
+    padding: 10px 0px 10px 20px;
+  }
+    .myprofile-content .underlinepra {
+        font-size: 1rem;
+    }
+.myprofile-btn button {
+  padding: 8px 15px;
+}
 }

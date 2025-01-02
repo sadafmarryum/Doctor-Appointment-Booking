@@ -5,6 +5,7 @@ import face from '../assets/footer/facebook.png';
 import email from '../assets/footer/email.png';
 import linkedin from '../assets/footer/linkedin.png';
 import twitter from '../assets/footer/twitter.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
  return (
@@ -12,11 +13,11 @@ const Footer = () => {
    <div className="footer-parent">
     <div className="App-parent-container">
      <div className="content-container">
-      <div className='footer-logo'><img src={logo} alt="health-icon" />
+      <div className='footer-logo'>
+       <img src={logo} alt="health-icon" />
        <h2>Health-Hub</h2>
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing Nihil  elit.  distinctio harum dolorum vitae beatae
-       ut, totam ullam dolorem  architecto veritatis rerum nesciunt?  </p>
+      <p> Your trusted partner in health and wellness. We aim to provide comprehensive and accessible resources to support your journey toward a healthier, happier life. Connect with us for expert guidance, updates, and tools tailored to your needs. </p>
       <div className="container-logo">
        <a href="https://www.facebook.com/" target='_blank' rel="noopener noreferrer"><img src={face} alt="logo" /></a> 
        <a href="https://www.gmail.com/" target='_blank' rel="noopener noreferrer"> <img src={email} alt="logo" /></a> 
@@ -28,10 +29,10 @@ const Footer = () => {
       <div className="company-info">
        <h3>Company</h3>
        <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Delivery</li>
-        <li>Privacy Policy</li>
+        <li><Link to="/" className='link'>Home</Link></li>
+        <li> <Link to="/docAppointment" className='link'>Doctors</Link></li>
+        <li><Link to="/about" className='link'>About</Link></li>
+        <li><Link to="/contact" className='link'>Contact Us</Link></li>
        </ul>
       </div>
 
@@ -47,14 +48,11 @@ const Footer = () => {
     </div>
     
     <div className="footer">
-     <hr />
+     <hr/>
      <p>Copyright &copy; 2024 HH Ltd.All right reserved</p>
     </div>
-
    </div>
-
   </>
- )
-};
+ )};
 
 export default Footer;
